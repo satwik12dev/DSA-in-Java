@@ -61,7 +61,7 @@ public class Operator {
 //        System.out.println(c);
 //
 //        byte d = 10;
-//        d+=5; // error is not there because of compound assignment operator fo implicit casting
+//        d+=5; // error is not there because of compound assignment operator for implicit casting
 //        System.out.println(d);
 
 
