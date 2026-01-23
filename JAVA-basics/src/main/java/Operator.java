@@ -55,36 +55,49 @@ public class Operator {
 //        int b = 5;
 //        int r = a/b+3*2-1;
 //        System.out.println(r);
-//
+//compound assignment or assignment operator
+        // +=, -=, *=, /=, %=
 //        int c = 10;
-//        c +=1;//compound assignment operator
+//        c +=1;
+//        System.out.println(c);
+//
+//        c-=1;
+//        System.out.println(c);
+//
+//        c*=5;
+//        System.out.println(c);
+//
+//        c/=2;
+//        System.out.println(c);
+//
+//        c%=3;
 //        System.out.println(c);
 //
 //        byte d = 10;
-//        d+=5; // error is not there because of compound assignment operator for implicit casting
+//        d+=5; // error is not there because of compound assignment or assignment operator for implicit casting
 //        System.out.println(d);
 
 
         //Increment and decrement operator
-        int a = 99;
-        ++a;
-        System.out.println(a);
-        a--;
-        System.out.println(a);
-
-        int b = 1;
+//        int a = 99;
+//        ++a;
+//        System.out.println(a);
+//        a--;
+//        System.out.println(a);
+//
+//        int b = 1;
 //        int c = b++ + b;
 //        System.out.println(c);
 //        int d = ++b + b;
 //        System.out.println(d);
 //        int e = b + ++b;
 //        System.out.println(e);
-        System.out.println(b++ + --b);
-
-        double x = 1.5;
-        double y = 2.5;
-        double z = 3.5;
-        double complexCalculation = (x + y) * (z - y) / (x + z);
-        System.out.println(complexCalculation);
+//        System.out.println(b++ + --b);
+//
+//        double x = 1.5;
+//        double y = 2.5;
+//        double z = 3.5;
+//        double complexCalculation = (x + y) * (z - y) / (x + z);
+//        System.out.println(complexCalculation);
     }
 }
