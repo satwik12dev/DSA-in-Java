@@ -8,6 +8,7 @@ public class Test2 {
         cat.breed = "Persian";
         cat.age = 7;
 
+        cat.makesound();
 
     }
 }
