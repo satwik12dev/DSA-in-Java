@@ -1,6 +1,6 @@
 package Sorting;
 
-public class BubbleSort {
+public class ArrayIndescendingusingBubbleSort {
 
     public static void main(String[] args) {
 
@@ -22,7 +22,7 @@ public class BubbleSort {
         bubbleSort4(arr4);
     }
 
-    // Non-Optimized Bubble Sort
+    // 1️⃣ Non-Optimized Bubble Sort
     static void bubbleSort(int[] arr) {
         int n = arr.length;
         int operations = 0;
@@ -30,7 +30,7 @@ public class BubbleSort {
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - 1; j++) {
                 operations++;
-                if (arr[j] > arr[j + 1]) {
+                if (arr[j] < arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -40,7 +40,7 @@ public class BubbleSort {
         print(arr, operations);
     }
 
-    // Optimized Bubble Sort (Inner loop reduced)
+    // 2️⃣ Optimized Bubble Sort (Inner loop reduced)
     static void bubbleSort2(int[] arr) {
         int n = arr.length;
         int operations = 0;
@@ -48,7 +48,7 @@ public class BubbleSort {
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - 1 - i; j++) {
                 operations++;
-                if (arr[j] > arr[j + 1]) {
+                if (arr[j] < arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -58,7 +58,7 @@ public class BubbleSort {
         print(arr, operations);
     }
 
-    // More Optimized Bubble Sort (isSorted flag)
+    // 3️⃣ More Optimized Bubble Sort (isSorted flag)
     static void bubbleSort3(int[] arr) {
         int n = arr.length;
         int operations = 0;
@@ -68,7 +68,7 @@ public class BubbleSort {
 
             for (int j = 0; j < n - 1 - i; j++) {
                 operations++;
-                if (arr[j] > arr[j + 1]) {
+                if (arr[j] < arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -80,7 +80,7 @@ public class BubbleSort {
         print(arr, operations);
     }
 
-    // Most Optimized Bubble Sort (swap counter)
+    // 4️⃣ Most Optimized Bubble Sort (swap counter)
     static void bubbleSort4(int[] arr) {
         int n = arr.length;
         int operations = 0;
@@ -90,7 +90,7 @@ public class BubbleSort {
 
             for (int j = 0; j < n - 1 - i; j++) {
                 operations++;
-                if (arr[j] > arr[j + 1]) {
+                if (arr[j] < arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
