@@ -2,49 +2,42 @@ package Search;
 
 public class CountOfNegativeandPositive {
     public static void main(String[] args) {
-        int[] arr = {-2,-1,-1,1,2,3};
+        int[] arr = {-2, -1, -1, 1, 2, 3};
         int res = count(arr);
-        System.out.println(res);
+        System.out.println(count(arr));
     }
 
-    static int count(int[] arr) {
+    static int count(int[] arr){
         int n = arr.length;
-
         // first index >= 0
         int low = 0, high = n - 1;
-        int firstNonNegative = n;
+        int firstNonNegative = 1;
 
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
+        while(low<=high){
+            int mid = low + (high-low)/2;
 
-            if (arr[mid] >= 0) {
+            if(arr[mid]>=0) {
+                high = mid -1;
                 firstNonNegative = mid;
-                high = mid - 1;
-            } else {
-                low = mid + 1;
+            }
+            else{
+                low = mid +1;
             }
         }
 
-        int negative = firstNonNegative;
+        low =0;
+        high = n-1;
+        int Negstive = n;
 
-        // first index > 0
-        low = 0;
-        high = n - 1;
-        int firstPositive = n;
-
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-
-            if (arr[mid] > 0) {
-                firstPositive = mid;
-                high = mid - 1;
-            } else {
-                low = mid + 1;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if(arr[mid]<0){
+                Negstive = mid;
+                low = mid+1;
+            }else{
+                high = mid -1;
             }
         }
-
-        int positive = n - firstPositive;
-
-        return Math.max(negative, positive);
+        return Math.max(Negstive,firstNonNegative);
     }
 }

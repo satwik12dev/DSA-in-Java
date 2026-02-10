@@ -13,9 +13,17 @@ public class RotateArray {
         int n = arr.length;
         d=d%n;
         rotation(arr,0,d-1);
+        print(arr);
         rotation(arr,d,n-1);
+        print(arr);
         rotation(arr,0,n-1);
-        for(int ele :arr) System.out.print(ele);
+        print(arr);
+        rotation(arr,0,n-1);
+        print(arr);
+    }
+    static void print(int[] arr){
+        for(int ele:arr) System.out.print(ele+" ");
+        System.out.println();
     }
 
     static void rotation(int[] arr,int i, int j){

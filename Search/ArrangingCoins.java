@@ -2,11 +2,12 @@ package Search;
 
 public class ArrangingCoins {
     public static void main(String[] args) {
-        int n = 13;
+        int n = 5;
         int  res = ArrangingCoins1(n);
+        System.out.println(1/2);
         System.out.println(res);
         int res2 = ArranginfCoins2(n);
-        System.out.println(res2);
+        System.out.println(res2 );
     }
     static int sqrt(long n){
         if(n==0) return 0;
