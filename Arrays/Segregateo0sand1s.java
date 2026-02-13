@@ -13,17 +13,7 @@ public class Segregateo0sand1s {
     static void segregate(int[] arr){
 
         //this solution is two pass solution
-        int numberofZeroes = 0;
-        int n = arr.length;
-        for(int ele:arr){
-            if(ele==0) numberofZeroes++;
-        }
-        for(int i = 0; i < numberofZeroes; i++){
-            arr[i]=0;
-        }
-        for (int i  = numberofZeroes; i< n; i++){
-            arr[i]=1;
-        }
+
         for(int ele:arr) System.out.print(ele);
     }
 

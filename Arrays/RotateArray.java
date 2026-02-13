@@ -2,37 +2,37 @@ package Arrays;
 
 public class RotateArray {
 
-    // int[] arr  = {6,8,1,2,4,9,0};
-    //rotate array by d, d-->1 2 3 4 5 6...
-    //rotated_array --> {2,4,9,0,6,8,1} when d=3.
-
-
     public static void main(String[] args) {
-        int[] arr = {7,3,9,1};
-        int d =9;
-        int n = arr.length;
-        d=d%n;
-        rotation(arr,0,d-1);
-        print(arr);
-        rotation(arr,d,n-1);
-        print(arr);
-        rotation(arr,0,n-1);
-        print(arr);
-        rotation(arr,0,n-1);
-        print(arr);
+        int[] arr = {6,8,1,2,4,9,0};
+        int d = 2;
+
+        rotateLeft(arr, d);
+
+        for(int x : arr) System.out.print(x + " ");
     }
-    static void print(int[] arr){
+
+    static void rotateLeft(int[] arr, int d){
+        int n = arr.length;
+        d = d % n;
+
+        reverse(arr, 0, d-1);
+        for(int ele:arr) System.out.print(ele+" ");
+        System.out.println();// step 1
+        reverse(arr, d, n-1);     // step 2
+        for(int ele:arr) System.out.print(ele+" ");
+        System.out.println();
+        reverse(arr, 0, n-1);     // step 3
         for(int ele:arr) System.out.print(ele+" ");
         System.out.println();
     }
 
-    static void rotation(int[] arr,int i, int j){
-            while(i<j){
-                int temp = arr[i];
-                arr[i]= arr[j];
-                arr[j]=temp;
-                i++;
-                j--;
-            }
+    static void reverse(int[] arr, int i, int j){
+        while(i < j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
         }
     }
+}
