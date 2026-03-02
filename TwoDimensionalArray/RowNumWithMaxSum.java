@@ -13,6 +13,7 @@ public class RowNumWithMaxSum {
             int sum = 0;
             for (int j = 0; j < arr[0].length; j++) {
                 sum += arr[i][j];
+
             }
             if(sum>maxSum){ maxSum=sum; row = i;}
         }
