@@ -7,7 +7,7 @@ public class SubStringsOfStrings {
         System.out.println(str.substring(0,7));
 
 
-        String s = "Satwik";
+        String s = "Satwik ";
         for (int i = 0; i < s.length(); i++) {
             for (int j = i+1; j <= s.length(); j++) {
                 System.out.print(s.substring(i,j)+" ");
