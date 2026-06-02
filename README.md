@@ -120,7 +120,6 @@ You can contribute by:
 - Adding new DSA problems
 - Optimizing existing solutions
 - Improving code readability
-- Adding comments or explanations
 
 Steps:
 1. Fork this repository  
