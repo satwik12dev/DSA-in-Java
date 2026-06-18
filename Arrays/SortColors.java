@@ -29,7 +29,6 @@ public class SortColors {
                 high--;
             }
         }
-
         for (int ele:arr) System.out.print(ele+" ");
     }
 }

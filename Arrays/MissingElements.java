@@ -17,19 +17,20 @@ public class MissingElements {
     //missing element --> 4;
 
     public static void main(String[] args) {
-        int[] arr = {1,5,3,4,2};
+        int[] arr = {3,0,1};
+
         int n = arr.length+1;
         FindMissing(arr,n);
     }
 
     static void FindMissing(int[] arr, int n){
-        int sum = n*(n+1)/2;
+        int sum = (n*(n-1))/2;
         int sumarr = 0;
         for(int i = 0 ;i< arr.length; i++) {
             sumarr += arr[i];
         }
 
-        int missing = sum -= sumarr;
+        int missing = sum - sumarr;
         System.out.println("Missing number is : "+missing);
     }
 }
