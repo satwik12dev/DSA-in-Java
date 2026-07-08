@@ -9,7 +9,6 @@ public class MostFrequentCharacter {
         sorting(s);
         frequencyArray(s);
     }
-
     static void bruteforce(String s){
         int n = s.length();
         int maxFre = 1;
@@ -29,7 +28,6 @@ public class MostFrequentCharacter {
         }
         System.out.println(max);
     }
-
     static  void sorting(String s){
         int i =0,j=0;
         int maxfre = 1;
@@ -55,7 +53,6 @@ public class MostFrequentCharacter {
         }
         System.out.println(ans);
     }
-
     static void frequencyArray(String s){
         int n = s.length();
         int maxfreq = 0;
