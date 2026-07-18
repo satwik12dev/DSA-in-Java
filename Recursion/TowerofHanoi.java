@@ -6,7 +6,7 @@ public class TowerofHanoi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        tower(n,'A','B','C');
+        tower(n, 'A', 'B', 'C');
     }
     public static void tower(int n, char a ,char b, char c){
         if(n==0) return;

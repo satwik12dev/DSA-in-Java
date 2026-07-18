@@ -23,7 +23,6 @@ public class GCDofTwoNumber {
     public static int gcd2(int a, int b){
         return (helper(Math.min(a,b),Math.max(a,b)));
     }
-
     public static int helper(int a, int b){
         if(a==0 ) return b;
         return (helper(b%a,a));
