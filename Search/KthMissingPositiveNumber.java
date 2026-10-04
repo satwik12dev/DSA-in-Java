@@ -2,7 +2,7 @@ package Search;
 
 public class KthMissingPositiveNumber {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,7,8};
+        int[] arr = { 1,2,3,7,8};
         int k = 2;
         int res = missing(arr,k);
         System.out.println(res);

@@ -2,7 +2,7 @@ package Search;
 
 public class SearchInARotatedArray {
     public static void main(String[] args) {
-        int[] arr = {4,5,6,7,8,9,10,1,2,3};
+        int[] arr = {4,5,6,7,8,9,11,1,2,3};
         int tar = 10;
         int res = search(arr,tar);
         System.out.println(res);

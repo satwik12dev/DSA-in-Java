@@ -6,6 +6,8 @@ public class KthSmallest {
         int k =3;
         int smallest = kthSmallest(arr,k);
         System.out.println(smallest);
+        int max = KthMax(arr,k);
+        System.out.println(max);
     }
 
     static int kthSmallest(int[] arr,int k){
@@ -24,5 +26,24 @@ public class KthSmallest {
             arr[idx] = temp;
         }
         return arr[k-1];
+    }
+
+    static int KthMax(int[] arr, int k){
+        int n = arr.length;
+        for(int i =0;i<k;i++){
+            int max = Integer.MIN_VALUE;
+            int idx = -1;
+            for (int j = i; j <n ; j++) {
+                if(arr[j]>max){
+                    max = arr[j];
+                    idx = j ;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[idx];
+            arr[idx] = temp;
+        }
+        return arr[k-1];
+
     }
 }
