@@ -4,15 +4,8 @@ public class SwapNodeByK {
 
     static void swap(int k, Node head) {
 
-        Node first = head;
         Node slow = head;
         Node fast = head;
-
-        // Find kth node from beginning
-        for (int i = 1; i < k; i++) {
-            if (first == null) return;
-            first = first.next;
-        }
 
         // Move fast k nodes ahead
         for (int i = 1; i <= k; i++) {
@@ -25,10 +18,14 @@ public class SwapNodeByK {
             slow = slow.next;
             fast = fast.next;
         }
+        fast=head;
+        for (int i = 1; i <= k-1; i++) {
+            fast = fast.next;
+        }
 
         // Swap values
-        int temp = first.val;
-        first.val = slow.val;
+        int temp = fast.val;
+        fast.val = slow.val;
         slow.val = temp;
 
         // Display
