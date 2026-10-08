@@ -27,6 +27,7 @@ public class DetectLoopInLinkedList {
         c.next=d;
         d.next=e;
         e.next=f;
+        f.next=c;
 
         System.out.println(detect(a));
 
