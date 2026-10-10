@@ -20,9 +20,11 @@ public class PartitionList {
             }
             temp=temp.next;
         }
-
+        new DisplatList().dis(dummy1);
         t1.next=dummy2.next;
         t2.next=null;
+
+        new DisplatList().dis(dummy2);
 
         return dummy1.next;
 
