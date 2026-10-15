@@ -7,22 +7,17 @@ public class SwapNodesInPairs {
     static Node swap(Node head) {
         Node dummy = new Node(-1);
         dummy.next = head;
-
         Node prev = dummy;
-
         while (prev.next != null && prev.next.next != null) {
             Node first = prev.next;
             Node second = first.next;
-
             // Swap the pair
             first.next = second.next;
             second.next = first;
             prev.next = second;
-
             // Move to the next pair
             prev = first;
         }
-
         return dummy.next;
     }
 
@@ -30,19 +25,15 @@ public class SwapNodesInPairs {
             if (head == null || head.next == null) {
                 return head;
             }
-
             Node d1 = new Node(-1);
             Node d2 = new Node(-1);
-
             Node t1 = d1;
             Node t2 = d2;
             Node temp = head;
             int i = 0;
-
             while (temp != null) {
                 Node nextNode = temp.next;
                 temp.next = null;
-
                 if (i % 2 == 0) {
                     t1.next = temp;
                     t1 = t1.next;
@@ -50,31 +41,23 @@ public class SwapNodesInPairs {
                     t2.next = temp;
                     t2 = t2.next;
                 }
-
                 temp = nextNode;
                 i++;
             }
-
             Node even = d1.next;
             Node odd = d2.next;
-
             Node dummy = new Node(-1);
             Node tail = dummy;
-
             while (even != null && odd != null) {
                 Node nextEven = even.next;
                 Node nextOdd = odd.next;
-
                 tail.next = odd;
                 odd.next = even;
-
                 tail = even;
                 even = nextEven;
                 odd = nextOdd;
             }
-
             tail.next = even;
-
             return dummy.next;
         }
 
